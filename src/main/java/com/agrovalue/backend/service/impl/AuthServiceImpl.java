@@ -49,7 +49,7 @@ public class AuthServiceImpl implements AuthService {
 
         // user is active immediately
         user.setVerified(true);
-       
+       user.setEmailVerified(true);
 
         String roleName = "ROLE_" + request.getRole().toUpperCase();
 
