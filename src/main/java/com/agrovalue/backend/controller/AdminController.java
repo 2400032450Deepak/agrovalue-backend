@@ -87,5 +87,6 @@ public class AdminController {
     public ResponseEntity<List<FarmerAnalyticsResponse>> getFarmerAnalytics() {
         return ResponseEntity.ok(adminService.getFarmerAnalytics());
     }
+    
 }
 
