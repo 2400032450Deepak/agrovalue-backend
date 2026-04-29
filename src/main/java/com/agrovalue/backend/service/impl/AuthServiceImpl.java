@@ -49,7 +49,7 @@ public class AuthServiceImpl implements AuthService {
 
         // user is active immediately
         user.setVerified(true);
-       user.setEmailVerified(true);
+        user.setEmailVerified(true);
 
         String roleName = "ROLE_" + request.getRole().toUpperCase();
 
@@ -60,8 +60,8 @@ public class AuthServiceImpl implements AuthService {
 
         userRepository.save(user);
 
-        // send welcome email
-        emailService.sendVerificationEmail(user.getEmail(), null);
+        // send welcome email - DISABLED (email feature removed)
+        // emailService.sendVerificationEmail(user.getEmail(), null);
 
         return "User registered successfully";
     }
